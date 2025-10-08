@@ -64,6 +64,17 @@ func Run() {
 	if err := writeJSON("assets/outputs/counts.json", merged); err != nil {
 		fmt.Println("Error writing JSON file:", err)
 	}
+
+	// to get the highest count
+	highestCount := 0
+	highestWord := ""
+	for word, count := range merged {
+		if count > highestCount {
+			highestCount = count
+			highestWord = word
+		}
+	}
+	fmt.Println("Highest count:", highestCount, "for word:", highestWord)
 }
 
 func writeJSON(path string, data interface{}) error {
