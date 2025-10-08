@@ -1,7 +1,7 @@
 package main
 
-import "go-playground/counter"
+import "go-playground/worker"
 
 func main() {
-	counter.Run()
+	worker.Run()
 }
