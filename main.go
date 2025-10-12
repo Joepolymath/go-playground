@@ -1,7 +1,7 @@
 package main
 
-import "go-playground/worker"
+import snippetbox "go-playground/snippet_box/cmd/web"
 
 func main() {
-	worker.Run()
+	snippetbox.Serve()
 }
